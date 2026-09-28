@@ -310,3 +310,22 @@ body {
   color: var(--text-gray);
   line-height: 1.4;
 }
+
+/* Mobile Responsive Adjustments for Background Image */
+@media (max-width: 768px) {
+  .hero {
+    /* Disable fixed background on mobile to stop extreme zooming */
+    background-attachment: scroll;
+    
+    /* Adjust focal point so the campus arch/building stays centered on tall screens */
+    background-position: center top; 
+    
+    /* Extra top padding so content doesn't collide with fixed navbar */
+    padding: 7rem 0 4rem; 
+  }
+
+  .hero-overlay {
+    /* Slightly darker overlay on mobile to keep text crisp on smaller displays */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(247, 250, 252, 0.7) 100%);
+  }
+}
